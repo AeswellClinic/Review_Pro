@@ -212,6 +212,7 @@ body{
     display: flex;
     max-width: 745px;
     position: relative;
+    padding: 20px;
 }
 .card {
 
