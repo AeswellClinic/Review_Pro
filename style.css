@@ -1,0 +1,327 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+body{
+  display: flex;
+  margin: 0 35px;
+  padding: 0;
+
+  align-items: center;
+  justify-content: center;
+
+}
+.wrapper{
+  display: flex;
+    max-width: 1200px;
+    position: relative;
+    margin-top: 0; 
+    padding-top: 0; 
+}
+.wrapper i {
+  height: 44px;
+  width: 44px;
+  color: #000000;
+  cursor: pointer;
+  font-size: 1.15rem;
+  text-align: center;
+  line-height: 44px;
+  background: #CECECE;
+  border-radius: 50%;
+  transition: transform 0.1s linear;
+  position: absolute;
+  bottom: 20px; 
+  z-index: 10; 
+  margin-bottom: -100px;
+}
+.heading {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 36px;
+  color: #000;
+  z-index: 100; 
+  font-weight: 500;
+}
+
+#left {
+  right: 50px;
+}
+
+#right {
+  right: 0px;
+}
+
+.wrapper i:active{
+  transform: scale(0.9);
+}
+
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+.carousel img{
+  height: 340px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  width: 100%; 
+}
+.left-card, .right-cards {
+  flex-grow: 1; 
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+}
+
+.left-card {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.wrapper .carousel {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  width: calc(300px * 3 + 30px); 
+  margin: 0 auto;
+}
+
+.card {
+  flex-grow: 1;
+  background-color: #F6F7F6;
+  border-radius: 10px;
+  overflow: visible;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 434px;
+  height: 296px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+
+
+
+
+.right-cards .card:nth-child(2) {
+  background-color: #F6F7F6;
+  height: 400px;
+  max-width: 327px;
+  min-width: 288px;
+  padding: 9px;
+
+}
+.card img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-top: 10px; 
+  margin-left: 15px; 
+}
+
+
+.card-content {
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; 
+}
+.card-content p {
+  font-size: 16px;
+  color: #171C18;
+  margin-bottom: 10px;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+.card-content {
+  padding: 20px; 
+}
+
+
+.card-footer {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  font-size: 0.9rem;
+  color: #888;
+ 
+  padding-top: 10px;
+ 
+}
+
+.card-footer span {
+  display: block; 
+  margin-bottom: 5px; 
+  color: #5F7088;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .wrapper {
+    display: flex;
+    max-width: 745px;
+    position: relative;
+}
+.card {
+
+  width: 352px;
+  height: 408px;
+
+ 
+ 
+}
+.wrapper i{
+  margin-bottom: -90px;
+}
+
+.right-cards .card:nth-child(2) {
+  background-color: #F6F7F6;
+
+  max-width: 352px;
+  min-width: 288px;
+  padding: 9px;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block; 
+   
+  }
+  .wrapper .carousel {
+    display: flex;
+    flex-direction: row; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    white-space: nowrap; 
+    padding-left: 15px; 
+  }
+
+  .left-card, .right-cards {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-right: 0; 
+    white-space: normal;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .right-cards {
+    display: flex; 
+    flex-direction: row;
+    overflow-x: auto; 
+    white-space: nowrap; 
+  }
+
+  .card {
+    min-width: 100%; 
+   
+    scroll-snap-align: start;
+    width: 395px;
+    height: 372px;
+    top: 10px;
+    margin-top: 100px;
+    padding: 0;
+    
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .heading {
+    position: fixed;
+    top: 0;
+    left: 35px;
+    font-size: 30px;
+  }
+
+  .carousel {
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+  }
+  .wrapper i {
+    height: 44px;
+    width: 44px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 1.15rem;
+    text-align: center;
+    line-height: 44px;
+    background: #CECECE;
+    border-radius: 50%;
+    transition: transform 0.1s linear;
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    margin-bottom: -60px;
+  }
+
+  #left {
+    left: 40%; 
+    transform: translateX(-50%);
+    bottom: 20px; 
+  }
+
+  #right {
+    left: 60%; 
+    transform: translateX(-50%);
+    bottom: 20px;
+  }
+
+}
+
