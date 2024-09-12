@@ -268,8 +268,7 @@ body{
   }
 
   .card {
-    min-width: 100%; 
-   
+    min-width: 100%;
     scroll-snap-align: start;
     width: 395px;
     height: 372px;
