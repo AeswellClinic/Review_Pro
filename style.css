@@ -8,7 +8,7 @@
 }
 body{
   display: flex;
-  margin: 0 0;
+  margin: 0 35px;
   padding: 0;
 
   align-items: center;
@@ -129,7 +129,7 @@ body{
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
-  width: calc(300px * 3 + 30px); 
+  width: calc(300px * 3 + 100px); 
   margin: 0 auto;
 }
 
@@ -140,7 +140,7 @@ body{
   overflow: visible;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  width: 434px;
+  width: 480px;
   height: 296px;
   margin: 10px;
   display: flex;
@@ -176,7 +176,6 @@ body{
   justify-content: space-between;
   flex-grow: 1; 
 }
-
 .card-content p {
   font-size: 16px;
   color: #171C18;
@@ -185,10 +184,10 @@ body{
   overflow-wrap: break-word;
   white-space: normal;
 }
-
 .card-content {
   padding: 20px; 
 }
+
 
 .card-footer {
   display: flex;
@@ -196,6 +195,7 @@ body{
   align-items: flex-start; 
   font-size: 0.9rem;
   color: #888;
+ 
   padding-top: 10px;
  
 }
@@ -212,9 +212,9 @@ body{
     display: flex;
     max-width: 745px;
     position: relative;
-    
 }
 .card {
+
   width: 352px;
   height: 408px;
 
@@ -267,7 +267,8 @@ body{
   }
 
   .card {
-    min-width: 100%;
+    min-width: 100%; 
+   
     scroll-snap-align: start;
     width: 395px;
     height: 372px;
@@ -279,7 +280,6 @@ body{
 
   .wrapper {
     width: 100%;
-    padding: 20px;
   }
 
   .heading {
