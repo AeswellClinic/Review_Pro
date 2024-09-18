@@ -284,9 +284,9 @@ body{
 
   .heading {
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 35px;
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .carousel {
@@ -314,13 +314,13 @@ body{
   #left {
     left: 40%; 
     transform: translateX(-50%);
-    bottom: 20px; 
+    bottom: 0px; 
   }
 
   #right {
     left: 60%; 
     transform: translateX(-50%);
-    bottom: 20px;
+    bottom: 0px;
   }
 
 }
